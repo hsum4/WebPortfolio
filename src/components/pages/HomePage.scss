@@ -1,4 +1,21 @@
 .homepage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    opacity: 0;
+    animation: fadeInStagger 1s forwards;
+
+    .profile {
+        display: flex;
+        align-items: center;
+    }
+
+    .info {
+        margin-right: 2rem;
+        text-align: left;
+    }
+
     h1 {
         color: #333;
         font-size: 2rem;
@@ -6,5 +23,30 @@
     p {
         color: #666;
         font-size: 1rem;
+    }
+
+    img {
+        width: 300px;
+        height: 300px;
+        object-fit: cover;
+        border-radius: 50%;
+        opacity: 0;
+        animation: fadeIn 0.5s forwards;
+        animation-delay: 0.7s;
+    }
+
+    @keyframes fadeIn {
+        to{
+            opacity: 1;
+        }
+    }
+
+    @keyframes fadeInStagger {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
     }
 }

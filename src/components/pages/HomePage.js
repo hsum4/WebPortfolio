@@ -3,11 +3,17 @@ import Layout from '../Layout';
 import './HomePage.scss';
 
 const HomePage = () => {
+  
   return (
     <Layout title="HOME">
       <div className="homepage">
-        <h1>Home Page</h1>
-        <p>Welcome to the Home Page.</p>
+        <div className='profile'>
+          <div className='info'>
+            <h1>Lance Lavador</h1>
+            <p>Web Developer</p>
+          </div>
+          <img src={process.env.PUBLIC_URL + 'pic.png'} alt = "Lance Lavador" />
+        </div>
       </div>
     </Layout>
   );

@@ -43,7 +43,7 @@ body {
     margin: auto;
     text-align: center;
     opacity: 0;
-    animation: fadeIn 3s forwards;
+    animation: fadeIn 2s forwards;
   }
   
   @keyframes fadeIn {
@@ -51,7 +51,7 @@ body {
       opacity: 1;
     }
   }
-  
+
   .title {
     position: absolute;
     top: 1rem;
