@@ -4,23 +4,18 @@ import HomePage from './components/pages/HomePage';
 import AboutPage from './components/pages/AboutPage';
 import ProjectsPage from './components/pages/ProjectsPage'
 import ContactPage from './components/pages/ContactPage';
-import Header from './components/layouts/Header';
-import Footer from './components/layouts/Footer';
 
-function App() {
+const App = () => {
   return (
     <Router>
-      <Header />
-        <Routes>
-          <Route path="/" exact component={HomePage} />
-          <Route path="/about" component={AboutPage} />
-          <Route path="/projects" component={ProjectsPage} />
-          <Route path="/contact" component={ContactPage} />
-        </Routes>
-        <Footer />
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/about" element={<AboutPage />} />
+        <Route path="/projects" element={<ProjectsPage />} />
+        <Route path="/contact" element={<ContactPage />} />
+      </Routes>
     </Router>
-
   );
-}
+};
 
 export default App;
