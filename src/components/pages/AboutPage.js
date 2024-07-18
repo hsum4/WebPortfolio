@@ -7,7 +7,7 @@ const AboutPage = () => {
         <Layout title="ABOUT">
             <div className="aboutpage">
                 <h1>About Me</h1>
-                <p>This is the about page.</p>
+                <p>rank 1 hanni fan</p>
             </div>
         </Layout>
     );

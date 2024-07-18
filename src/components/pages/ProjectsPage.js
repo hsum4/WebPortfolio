@@ -7,7 +7,7 @@ const ProjectsPage = () => {
         <Layout title='PROJECTS'>
             <div className='projectspage'>
                 <h1>My Projects</h1>
-                <p>This is the Projects Page.</p>
+                <p>Joga!</p>
             </div>
         </Layout>
     );
