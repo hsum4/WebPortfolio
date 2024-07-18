@@ -1,55 +1,67 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import './Layout.scss'
+import './Layout.scss';
 
 const Layout = ({ children, title }) => {
-    const [typedTitle, setTypedTitle] = useState('');
-    const location = useLocation(); //get current url
-    let typingInterval;
+  const [typedTitle, setTypedTitle] = useState('');
+  const [sidebarOpen, setSidebarOpen] = useState(false);
+  const location = useLocation();
+  let typingInterval;
 
-    useEffect(() => {
-        const newTitle = title; //get title from prop
+  useEffect(() => {
+    const newTitle = title;
 
-        let timerId = setTimeout(() => {
-            setTypedTitle('');  //clear prev title
-            let i = 0;
-            const typingInterval = setInterval(() => {
-                setTypedTitle(newTitle.substring(0, i+1));
-                i++;
-                if (i > newTitle.length) {
-                  clearInterval(typingInterval);
-                }
-              }, 100); //adjust typing speed
-          }, 500); //adjust delay before typing starts
+    let timerId = setTimeout(() => {
+      setTypedTitle('');
+      let i = 0;
+      const typingInterval = setInterval(() => {
+        setTypedTitle(newTitle.substring(0, i + 1));
+        i++;
+        if (i > newTitle.length) {
+          clearInterval(typingInterval);
+        }
+      }, 100);
+    }, 500);
 
-          //cleanup func
-          return () => {
-            clearTimeout(timerId);
-            clearInterval(typingInterval);
-          };
-      }, [title, location, typingInterval]);
+    return () => {
+      clearTimeout(timerId);
+      clearInterval(typingInterval);
+    };
+  }, [title, location, typingInterval]);
 
-    return (
-      <div className="layout">
-        <div className="sidebar">
-          <nav>
-            <ul>
-              <li><Link to="/">Home</Link></li>
-              <li><Link to="/about">About</Link></li>
-              <li><Link to="/projects">Projects</Link></li>
-              <li><Link to="/contact">Contact</Link></li>
-            </ul>
-          </nav>
-        </div>
-        <div className="content">
-          {children}
-        </div>
-        <div className="title">
-          <span>{typedTitle}</span>
-          <div className="blinking-box"></div>
-        </div>
-      </div>
-    );
+  // Close sidebar on location change
+  useEffect(() => {
+    setSidebarOpen(false);
+  }, [location]);
+
+  const toggleSidebar = () => {
+    setSidebarOpen(!sidebarOpen);
   };
-  
-  export default Layout;
+
+  return (
+    <div className="layout">
+      <button className="hamburger" onClick={toggleSidebar}>
+        &#9776;
+      </button>
+      <div className={`sidebar ${sidebarOpen ? 'open' : ''}`}>
+        <nav>
+          <ul>
+            <li><Link to="/" onClick={toggleSidebar}>Home</Link></li>
+            <li><Link to="/about" onClick={toggleSidebar}>About</Link></li>
+            <li><Link to="/projects" onClick={toggleSidebar}>Projects</Link></li>
+            <li><Link to="/contact" onClick={toggleSidebar}>Contact</Link></li>
+          </ul>
+        </nav>
+      </div>
+      <div className="content">
+        {children}
+      </div>
+      <div className="title">
+        <span>{typedTitle}</span>
+        <div className="blinking-box"></div>
+      </div>
+    </div>
+  );
+};
+
+export default Layout;
