@@ -47,14 +47,15 @@ body {
 
   @media (min-width: 768px) {
     position: fixed;
-    top: 0;  
+    top: auto;
+    bottom: 0;
     right: 0;
-    width: auto; /* Adjust width as needed */
-    height: 100%;
+    width: auto;
+    height: auto;
     padding: 1rem;
-    background-color: transparent; /* Make sidebar transparent */
+    background-color: transparent;
     transform: none;
-    z-index: 999; /* Ensure it's above other content */
+    z-index: 999;
   }
 
   nav ul {
@@ -67,7 +68,7 @@ body {
 
     @media (min-width: 768px) {
       flex-direction: column;
-      align-items: center;
+      align-items: flex-start;
     }
   }
 
@@ -83,6 +84,7 @@ body {
     text-decoration: none;
     color: #333;
     font-size: 1.2rem;
+    text-align: left;
   }
 
   nav ul li a:hover {
