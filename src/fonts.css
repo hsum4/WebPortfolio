@@ -1,0 +1,10 @@
+@font-face {
+    font-family: Monocle-Bold;
+    src: url('./fonts/Monocle Bold.otf') format('opentype');
+    font-weight: normal;
+    font-styl: normal;
+}
+
+body {
+    font-family: 'Monocle-Boldd', Arial, sans-serif
+}
