@@ -40,9 +40,15 @@ const Layout = ({ children, title }) => {
 
   return (
     <div className="layout">
-      <button className="hamburger" onClick={toggleSidebar}>
-        &#9776;
-      </button>
+      <div className="header">
+        <button className="hamburger" onClick={toggleSidebar}>
+          &#9776;
+        </button>
+        <div className="title">
+          <span>{typedTitle}</span>
+          <div className="blinking-box"></div>
+        </div>
+      </div>
       <div className={`sidebar ${sidebarOpen ? 'open' : ''}`}>
         <nav>
           <ul>
@@ -55,10 +61,6 @@ const Layout = ({ children, title }) => {
       </div>
       <div className="content">
         {children}
-      </div>
-      <div className="title">
-        <span>{typedTitle}</span>
-        <div className="blinking-box"></div>
       </div>
     </div>
   );
