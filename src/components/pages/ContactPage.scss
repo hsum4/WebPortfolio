@@ -1,10 +1,27 @@
 .contactpage {
     h1 {
-        color: #333;
-        font-size: 2rem;
+      color: #333;
+      font-size: 2rem;
     }
     p {
-        color: #666;
-        font-size: 1rem;
+      color: #666;
+      font-size: 1rem;
+      margin-bottom: 2rem;
     }
-}
+    .contact-links {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      a {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        color: #333;
+        text-decoration: none;
+        transition: color 0.2s ease;
+        &:hover {
+          color: #666;
+        }
+      }
+    }
+  }
