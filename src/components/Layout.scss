@@ -111,7 +111,7 @@ body {
 }
 
 .title {
-  position: fixed;
+  position: absolute;
   top: 1rem;
   left: 1rem;
   display: flex;
@@ -126,6 +126,7 @@ body {
     margin-left: 0.5rem;
     animation: blink 1.5s infinite;
     margin-top: 0.57rem;
+    color: #fff
   }
 
   @keyframes blink {
