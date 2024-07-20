@@ -56,6 +56,7 @@ const Layout = ({ children, title }) => {
             <li><Link to="/about" onClick={toggleSidebar}>About</Link></li>
             <li><Link to="/projects" onClick={toggleSidebar}>Projects</Link></li>
             <li><Link to="/contact" onClick={toggleSidebar}>Contact</Link></li>
+            <li><Link to="/internship" onClick={toggleSidebar}>Internship</Link></li>
           </ul>
         </nav>
       </div>
