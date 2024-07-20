@@ -5,13 +5,13 @@ import './ProjectsPage.scss';
 const projects = [
     {
         title: 'Istorya Adventure',
-        description: 'A',
-        imageUrl: 'path/to/image1.jpg',
+        description: 'A DGBL application made for students in grades 5 and 6, in order to supplement their learning of Philipinne History.',
+        imageUrl: 'project 1.jpg',
     },
     {
-        title: 'Dental Clinic Appointment System',
-        description: 'A',
-        imageUrl: 'path/to/image2.jpg',
+        title: 'Dental Clinic Site',
+        description: 'A site for my local dental clinic. It was originally developed as a project for my IT114 course.',
+        imageUrl: 'astradentist.jpg',
     },
     // Add more projects as needed
 ];
