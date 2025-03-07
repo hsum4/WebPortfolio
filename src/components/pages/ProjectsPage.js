@@ -10,7 +10,7 @@ const projects = [
     },
     {
         title: 'Dental Clinic Site',
-        description: 'A site for a local clinic. It was originally developed as a project for my IT114 course. The project files are stored in GitHub.',
+        description: 'A site to handle appointments for a dental clinic. It was originally developed as a project for my IT114 course. The project files are stored in GitHub.',
         imageUrl: 'dentalclinicproj.png',
     },
     // add more projects
