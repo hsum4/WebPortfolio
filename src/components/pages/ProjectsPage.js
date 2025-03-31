@@ -5,7 +5,7 @@ import './ProjectsPage.scss';
 const projects = [
     {
         title: 'Istorya Adventure',
-        description: 'A DGBL application made for students in grades 5 and 6, an alternative way to supplement their learning of Philipinne History.',
+        description: 'A DGBL application made for students in grades 5 and 6, an alternative way to supplement their learning of Philippine History.',
         imageUrl: 'project 1.jpg',
     },
     {
